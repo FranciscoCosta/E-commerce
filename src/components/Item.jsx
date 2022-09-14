@@ -2,6 +2,7 @@ import React from 'react';
 import { string, number, func } from 'prop-types';
 import { Link } from 'react-router-dom';
 import './Item.css';
+import { GoPackage } from 'react-icons/go';
 
 export default class Item extends React.Component {
   render() {
@@ -16,10 +17,14 @@ export default class Item extends React.Component {
 
     return (
       <div className='card-item-container'>
-        <Link to={ `/ProductDetails/${id}` }>
+        <Link to={ `/ProductDetails/${id}` } className="Link-product">
           <div className="card-item-product">
               <img src={ thumbnail } alt={ title } />
-              {shipping.free_shipping && <p>Frete Gratis</p>}
+              {shipping.free_shipping && 
+              <div className='free-shipping'>
+                <GoPackage size={50} color="#c18a54"/>
+                <p>Frete Grátis</p>
+              </div>}
               <h6>{title}</h6>
               <p>{`R$ ${price}`}</p>
             </div>

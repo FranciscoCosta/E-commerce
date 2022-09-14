@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10rem;
+    gap: 5rem;
     justify-content: center;
 }
 
@@ -12,8 +12,8 @@
     border-radius: 12px;
     background-color: white;
     align-items: center;
-    justify-content: space-between;
-    height: 25rem;
+    justify-content: space-evenly;
+    height: 30rem;
     width: 20rem;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     border: 2px solid #d5dce7 ;
@@ -28,5 +28,37 @@
     padding: 1rem 1rem;
     border-radius: 12px;
     width: 150px;
+}
 
+.card-item-product h6{
+    color: #17242a;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.card-item-product p{
+    text-decoration: none;
+    color: #17242a;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 1rem;
+}
+.Link-product{
+    text-decoration: none;
+}
+
+.free-shipping{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-cart{
+    background-color: #2fc18c;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 80%;
+    height:3.3rem;
+    border: 2px solid #17242a;
+    border-radius: 6px;
+    text-align: center;
 }

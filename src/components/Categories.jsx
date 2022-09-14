@@ -4,8 +4,10 @@ import './Categories.css';
 import { FaDog, FaGamepad, FaCar } from 'react-icons/fa';
 import { BsFillHouseDoorFill } from 'react-icons/bs';
 import { GiDrinkMe } from 'react-icons/gi';
+import { GiArchiveResearch } from 'react-icons/gi';
 import { RiComputerFill } from 'react-icons/ri';
 import { getProductsFromCategoryAndQuery } from '../service/api';
+
 import Item from './Item';
 
 export default class Categories extends Component {
@@ -14,11 +16,12 @@ export default class Categories extends Component {
     search: false,
   };
   handleOver = (event) => {
-    if(event.type==="mouseover"){
+    if (event.type === 'mouseover') {
       event.target.style.color = '#00f600';
-    }if(event.type==="mouseout"){
+    }
+    if (event.type === 'mouseout') {
       event.target.style.color = '#2fc18c';
-  };
+    }
   };
   handleApi = async (value) => {
     const results = await getProductsFromCategoryAndQuery(value);
@@ -55,7 +58,7 @@ export default class Categories extends Component {
               onMouseOut={this.handleOver}
               onClick={() => this.handleApi('Animais')}
             />
-            <h4>Animais</h4>
+            <h4 onClick={() => this.handleApi('Animais')}>Animais</h4>
           </div>
           <div className='categories-icon-wrapper'>
             <BsFillHouseDoorFill
@@ -66,7 +69,7 @@ export default class Categories extends Component {
               onMouseOut={this.handleOver}
               onClick={() => this.handleApi('Casa')}
             />
-            <h4>Casa</h4>
+            <h4 onClick={() => this.handleApi('Casa')}>Casa</h4>
           </div>
           <div className='categories-icon-wrapper'>
             <FaGamepad
@@ -77,7 +80,7 @@ export default class Categories extends Component {
               onMouseOut={this.handleOver}
               onClick={() => this.handleApi('Jogos')}
             />
-            <h4>Jogos</h4>
+            <h4 onClick={() => this.handleApi('Jogos')}>Jogos</h4>
           </div>
           <div className='categories-icon-wrapper'>
             <GiDrinkMe
@@ -88,7 +91,7 @@ export default class Categories extends Component {
               onMouseOut={this.handleOver}
               onClick={() => this.handleApi('Drink')}
             />
-            <h4>Bebidas</h4>
+            <h4 onClick={() => this.handleApi('Bebidas')}>Bebidas</h4>
           </div>
           <div className='categories-icon-wrapper'>
             <FaCar
@@ -99,7 +102,7 @@ export default class Categories extends Component {
               onMouseOut={this.handleOver}
               onClick={() => this.handleApi('Carros')}
             />
-            <h4>Carros</h4>
+            <h4 onClick={() => this.handleApi('Carros')}>Carros</h4>
           </div>
           <div className='categories-icon-wrapper'>
             <RiComputerFill
@@ -110,17 +113,20 @@ export default class Categories extends Component {
               onMouseOut={this.handleOver}
               onClick={() => this.handleApi('Computadores')}
             />
-            <h4>Computadores</h4>
+            <h4 onClick={() => this.handleApi('Computadores')} >Computadores</h4>
           </div>
         </div>
         <div>
           {list.length === 0 && (
-            <p className='info-hero-main'>
-              Digite algum termo de pesquisa ou escolha uma categoria.
-            </p>
+            <div className='info-product'>
+              <GiArchiveResearch size={100} className="info-product-icon"/>
+              <p  color='#d5dce7'>
+                Digite algum termo de pesquisa ou escolha uma categoria.
+              </p>
+            </div>
           )}
           {search && list.length === 0 ? (
-            <p className='info-hero-main'>Nenhum produto foi encontrado</p>
+            <p className='info-product-fail'>Nenhum produto foi encontrado</p>
           ) : (
             <div className='Wrapper-itens'>{list}</div>
           )}

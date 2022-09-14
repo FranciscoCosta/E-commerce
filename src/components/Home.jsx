@@ -7,6 +7,7 @@ import Swipper from './Swipper'
 export default class Home extends Component {
   render() {
     return (
+      <>
       <div>
         <Header />
         <section className='hero-container'>
@@ -15,9 +16,12 @@ export default class Home extends Component {
         </section>
         <section>
           <Categories />
+          
         </section>
-        <Footer />
+        
       </div>
+      <Footer />
+      </>
     )
   }
 }

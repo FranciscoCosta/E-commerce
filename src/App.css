@@ -18,6 +18,9 @@
 body{
     background-color: var(--background--color);
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 .header-container{
     display: flex;
@@ -27,6 +30,10 @@ body{
     margin-bottom: 2rem;
     width: 90%;
     margin: 0 auto;
+    position: sticky;
+    top: 0;
+    background-color: var(--background--color);
+    z-index: 999;
 }
 
 .header-logo img{
@@ -86,6 +93,12 @@ body{
     width: 90%;
     margin: 0 auto;
     background: var(--light--blue-color);
+}
+
+.info-product{
+    text-align: center;
+    font-size: 3rem;
+    color:#506574;
 }
   @media (max-width: 852px)and (min-width: 714px){
    
@@ -158,7 +171,7 @@ body{
         width: 100%;
         height: 7vh;
         position: sticky;   
-        bottom: 0px;
+        bottom: 0vh;
         background-color: var(--background--color);
         cursor: pointer;
     }
