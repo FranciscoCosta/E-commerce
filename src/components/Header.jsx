@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from "../images/logo.png";
-import { FaCartArrowDown } from 'react-icons/fa';
+import { BsSearch } from 'react-icons/bs';
+import { FaCartArrowDown  } from 'react-icons/fa';
+
+
 
 export default class Header extends Component {
   render() {
@@ -10,6 +13,7 @@ export default class Header extends Component {
             <img src={logo} alt='Trybe Store logo'></img>
         </div>
         <div className='header-mid'>
+        <BsSearch size={30} color="#2fc18c" className='header-btn-small'/>
         <input
             type="text"
             className="header-input"
@@ -21,6 +25,7 @@ export default class Header extends Component {
             Buscar
           </button>
         </div>
+        
         <FaCartArrowDown size={30} color="#2fc18c" className='header-cart'/>
       </header>
     )

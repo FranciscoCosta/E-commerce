@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Footer from './Footer'
 import Header from './Header'
 
 export default class Home extends Component {
@@ -9,6 +10,7 @@ export default class Home extends Component {
         <section className='hero-container'>
           
         </section>
+        <Footer />
       </div>
     )
   }
