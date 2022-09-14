@@ -96,6 +96,7 @@ body::-webkit-scrollbar {
 }
 
 .info-product{
+    margin-top: 5rem;
     text-align: center;
     font-size: 3rem;
     color:#506574;

@@ -16,7 +16,7 @@ export default class Item extends React.Component {
     } = this.props;
 
     return (
-      <div className='card-item-container'>
+      <div className='card-item-container' data-aos="fade-up">
         <Link to={ `/ProductDetails/${id}` } className="Link-product">
           <div className="card-item-product">
               <img src={ thumbnail } alt={ title } />

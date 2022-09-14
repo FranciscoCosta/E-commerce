@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import './Item.css';
 import './Categories.css';
-import { FaDog, FaGamepad, FaCar } from 'react-icons/fa';
+import { FaDog, FaGamepad, FaCar , FaCookieBite , FaCamera, FaPhone} from 'react-icons/fa';
 import { BsFillHouseDoorFill } from 'react-icons/bs';
-import { GiDrinkMe } from 'react-icons/gi';
-import { GiArchiveResearch } from 'react-icons/gi';
+import { GiDrinkMe , GiCorn, GiArchiveResearch, GiRunningShoe} from 'react-icons/gi';
+import { SiFramer} from 'react-icons/si';
+
+
+
+
+
 import { RiComputerFill } from 'react-icons/ri';
 import { getProductsFromCategoryAndQuery } from '../service/api';
 
@@ -49,6 +54,17 @@ export default class Categories extends Component {
       <div className='categories-container'>
         <h1 className='categories-title'>Categorias</h1>
         <div className='categories-container-icons'>
+        <div className='categories-icon-wrapper'>
+            <GiCorn
+              size={100}
+              color='#2fc18c'
+              className='categories-icon'
+              onMouseOver={this.handleOver}
+              onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Agro')}
+            />
+            <h4 onClick={() => this.handleApi('Agro')}>Agro</h4>
+          </div>
           <div className='categories-icon-wrapper' name='animais'>
             <FaDog
               size={100}
@@ -60,27 +76,27 @@ export default class Categories extends Component {
             />
             <h4 onClick={() => this.handleApi('Animais')}>Animais</h4>
           </div>
-          <div className='categories-icon-wrapper'>
-            <BsFillHouseDoorFill
+          <div className='categories-icon-wrapper' name='animais'>
+            <FaCookieBite
               size={100}
               color='#2fc18c'
               className='categories-icon'
               onMouseOver={this.handleOver}
               onMouseOut={this.handleOver}
-              onClick={() => this.handleApi('Casa')}
+              onClick={() => this.handleApi('Alimentos')}
             />
-            <h4 onClick={() => this.handleApi('Casa')}>Casa</h4>
+            <h4 onClick={() => this.handleApi('Alimentos')}>Alimentos</h4>
           </div>
           <div className='categories-icon-wrapper'>
-            <FaGamepad
+            <SiFramer
               size={100}
               color='#2fc18c'
               className='categories-icon'
               onMouseOver={this.handleOver}
               onMouseOut={this.handleOver}
-              onClick={() => this.handleApi('Jogos')}
+              onClick={() => this.handleApi('Arte')}
             />
-            <h4 onClick={() => this.handleApi('Jogos')}>Jogos</h4>
+            <h4 onClick={() => this.handleApi('Arte')}>Arte</h4>
           </div>
           <div className='categories-icon-wrapper'>
             <GiDrinkMe
@@ -94,6 +110,28 @@ export default class Categories extends Component {
             <h4 onClick={() => this.handleApi('Bebidas')}>Bebidas</h4>
           </div>
           <div className='categories-icon-wrapper'>
+            <GiRunningShoe
+              size={100}
+              color='#2fc18c'
+              className='categories-icon'
+              onMouseOver={this.handleOver}
+              onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Calçado')}
+            />
+            <h4 onClick={() => this.handleApi('Calçado')}>Calçado</h4>
+          </div>
+          <div className='categories-icon-wrapper'>
+            <FaCamera
+              size={100}
+              color='#2fc18c'
+              className='categories-icon'
+              onMouseOver={this.handleOver}
+              onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Cameras')}
+            />
+            <h4 onClick={() => this.handleApi('Cameras')}>Cameras</h4>
+          </div>
+          <div className='categories-icon-wrapper'>
             <FaCar
               size={100}
               color='#2fc18c'
@@ -105,6 +143,28 @@ export default class Categories extends Component {
             <h4 onClick={() => this.handleApi('Carros')}>Carros</h4>
           </div>
           <div className='categories-icon-wrapper'>
+            <BsFillHouseDoorFill
+              size={100}
+              color='#2fc18c'
+              className='categories-icon'
+              onMouseOver={this.handleOver}
+              onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Casa')}
+            />
+            <h4 onClick={() => this.handleApi('Casa')}>Casa</h4>
+          </div>
+          <div className='categories-icon-wrapper'>
+            <FaPhone
+              size={100}
+              color='#2fc18c'
+              className='categories-icon'
+              onMouseOver={this.handleOver}
+              onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Celular')}
+            />
+            <h4 onClick={() => this.handleApi('Celular')} >Celular</h4>
+          </div>
+          <div className='categories-icon-wrapper'>
             <RiComputerFill
               size={100}
               color='#2fc18c'
@@ -114,6 +174,17 @@ export default class Categories extends Component {
               onClick={() => this.handleApi('Computadores')}
             />
             <h4 onClick={() => this.handleApi('Computadores')} >Computadores</h4>
+          </div>
+          <div className='categories-icon-wrapper'>
+            <FaGamepad
+              size={100}
+              color='#2fc18c'
+              className='categories-icon'
+              onMouseOver={this.handleOver}
+              onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Jogos')}
+            />
+            <h4 onClick={() => this.handleApi('Jogos')}>Jogos</h4>
           </div>
         </div>
         <div>
@@ -128,7 +199,9 @@ export default class Categories extends Component {
           {search && list.length === 0 ? (
             <p className='info-product-fail'>Nenhum produto foi encontrado</p>
           ) : (
-            <div className='Wrapper-itens'>{list}</div>
+            <div>
+              <div className='Wrapper-itens'>{list}</div>
+            </div>
           )}
         </div>
       </div>

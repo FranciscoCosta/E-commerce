@@ -12,7 +12,6 @@ export default class Home extends Component {
         <Header />
         <section className='hero-container'>
           <Swipper className="swipper-full"/>
-          < div className="line"></div>
         </section>
         <section>
           <Categories />

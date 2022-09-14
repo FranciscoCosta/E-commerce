@@ -7,6 +7,7 @@
 .categories-title{
     color: #17242a;
     font-size: 5rem;
+    padding: 10rem 0 ;
     text-transform: uppercase;
     text-align: center;
 
@@ -17,6 +18,7 @@
     width: 80%;
     margin: 0 auto;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .categories-icon{
@@ -43,6 +45,8 @@
     .categories-title{
         font-size: 2rem;
         background-color: #2fc18c;
+        padding: 0;
+        margin: 0;
         border-bottom: 2px solid #17242a;
     }
     .categories-container{
