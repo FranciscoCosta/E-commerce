@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --primary--green-color : #2fc18c;
+
+    --background--color : #17242a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+    background-color: var(--background--color);
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo img{
+    width: 20vw;
+    margin-left: 2vw;
+    margin-top: 2rem;
+}
+
+.header-input{
+    border-radius: 22px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    height: 45px;
+    padding: 10px;
+    width: 30vw;
+    margin-top: 2rem;
+}
+
+.header-input:focus {
+    outline: 2px solid var(--primary--green-color);
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-btn {
+    background-color: white;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 1px 8px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    height: 45px;
+    letter-spacing: 2.5px;
+    outline: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 140px;
+    margin-left: 1rem;
+    margin-top: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .header-btn:hover {
+    background-color: var(--primary--green-color);
+    box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.5);
+    color: white;
   }
-}
+
+  .header-cart{
+    margin: 2rem 2rem;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+
+  @media (max-width: 852px)and (min-width: 641px){
+   
+    .header-logo img{
+        width: 150px;
+    }
+    .header-input{
+        width: 18rem;
+        height: 30px;
+        font-size: 14px;
+
+    }
+    .header-btn{
+        width: 80px;
+        letter-spacing: normal;
+        font-size: 14px;
+        height: 30px;
+    }
+  }
+  @media (max-width: 640px) {
+    .header-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .header-logo img{
+        display: none;
+    }
+    .header-mid{
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+    }
+    .header-input{
+        margin: 0 auto;
+        width: 80%;
+    }
+    .header-btn{
+        margin: 0 auto;
+        align-self: flex-end;
+        justify-self: start;
+    }
+    .header-cart{
+        align-self: flex-end;
+    }
+    .header-btn:hover {
+        transform: none;
+    }
+  }
