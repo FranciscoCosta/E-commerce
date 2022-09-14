@@ -11,6 +11,8 @@
     --primary--green-color : #2fc18c;
 
     --background--color : #17242a;
+
+    --light--blue-color: #c7d8e0;
 }
 
 body{
@@ -21,6 +23,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 20vh;
+    margin-bottom: 2rem;
 }
 
 .header-logo img{
@@ -72,7 +76,12 @@ body{
     align-self: flex-start;
     cursor: pointer;
   }
-
+.hero-container{
+    width: 90%;
+    margin: 0 auto;
+    background: var(--light--blue-color);
+    height: 130vh;
+}
   @media (max-width: 852px)and (min-width: 641px){
    
     .header-logo img{

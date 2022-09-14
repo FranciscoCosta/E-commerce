@@ -6,6 +6,9 @@ export default class Home extends Component {
     return (
       <div>
         <Header />
+        <section className='hero-container'>
+          
+        </section>
       </div>
     )
   }
