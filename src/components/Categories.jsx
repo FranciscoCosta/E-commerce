@@ -64,6 +64,7 @@ export default class Categories extends Component {
               className='categories-icon'
               onMouseOver={this.handleOver}
               onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Casa')}
             />
             <h4>Casa</h4>
           </div>
@@ -74,6 +75,7 @@ export default class Categories extends Component {
               className='categories-icon'
               onMouseOver={this.handleOver}
               onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Jogos')}
             />
             <h4>Jogos</h4>
           </div>
@@ -84,6 +86,7 @@ export default class Categories extends Component {
               className='categories-icon'
               onMouseOver={this.handleOver}
               onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Drink')}
             />
             <h4>Bebidas</h4>
           </div>
@@ -94,6 +97,7 @@ export default class Categories extends Component {
               className='categories-icon'
               onMouseOver={this.handleOver}
               onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Carros')}
             />
             <h4>Carros</h4>
           </div>
@@ -104,6 +108,7 @@ export default class Categories extends Component {
               className='categories-icon'
               onMouseOver={this.handleOver}
               onMouseOut={this.handleOver}
+              onClick={() => this.handleApi('Computadores')}
             />
             <h4>Computadores</h4>
           </div>

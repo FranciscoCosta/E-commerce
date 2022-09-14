@@ -18,15 +18,11 @@ export default class Item extends React.Component {
       <div className='card-item-container'>
         <Link to={ `/ProductDetails/${id}` }>
           <div className="card-item-product">
-            <div className="card-item-top">
               <img src={ thumbnail } alt={ title } />
               {shipping.free_shipping && <p>Frete Gratis</p>}
-            </div>
-            <div className="card-item-bottom">
               <h6>{title}</h6>
               <p>{`R$ ${price}`}</p>
             </div>
-          </div>
         </Link>
 
         <button
