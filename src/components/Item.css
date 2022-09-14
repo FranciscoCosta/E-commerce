@@ -1,0 +1,25 @@
+.Wrapper-itens{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    align-items: center;
+    
+}
+
+.card-item-container{
+    border: 1px solid black;
+    width: 20rem;
+    height: 40rem;
+    
+}
+
+.card-item-product{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item-top{
+    object-fit: cover;
+    background-color: white ;
+}

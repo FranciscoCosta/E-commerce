@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Categories from './Categories'
 import Footer from './Footer'
 import Header from './Header'
 import Swipper from './Swipper'
@@ -9,8 +10,11 @@ export default class Home extends Component {
       <div>
         <Header />
         <section className='hero-container'>
-          <Swipper/>
+          <Swipper className="swipper-full"/>
           < div className="line"></div>
+        </section>
+        <section>
+          <Categories />
         </section>
         <Footer />
       </div>
