@@ -9,8 +9,6 @@ export default class Header extends Component {
 
   state = {
     inputValue: '',
-    lsit:[],
-    search:false,
   };
   
   
@@ -19,6 +17,7 @@ export default class Header extends Component {
 
   render() {
     const { inputValue } = this.state;
+    const { handleApi} = this.props;
     return (
       <header className='header-container'>
         <div className='header-logo'>
@@ -35,7 +34,7 @@ export default class Header extends Component {
           <button
             type="button"
             className="header-btn"
-            onClick={ this.handleApi }
+            onClick={ handleApi }
             value={ inputValue } 
           >
             Buscar

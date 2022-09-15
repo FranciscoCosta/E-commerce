@@ -1,5 +1,6 @@
 
 .categories-container{
+
     width: 90%;
     margin: 0 auto;
     background-color: #c7d8e0;
@@ -31,6 +32,8 @@
 }
 
 .categories-icon:hover{
+    background-color: #f7f5c9;
+    transition: 0.3s all;
     transform: translateY(-7px);
 }
 
